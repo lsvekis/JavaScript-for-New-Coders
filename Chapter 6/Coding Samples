@@ -1,0 +1,75 @@
+Sample 1: Basic Function Declaration
+function greetUser() {
+  console.log("Welcome to the world of JavaScript!");
+}
+greetUser();
+Sample 2: Function with Parameters
+function greetByName(name) {
+  console.log("Hello, " + name + "!");
+}
+greetByName("Jordan");
+Sample 3: Function Returning a Value
+function square(number) {
+  return number * number;
+}
+let result = square(4);
+console.log("Square of 4 is: " + result);
+Sample 4: Calculator - Addition Function
+function add(a, b) {
+  return a + b;
+}
+console.log("5 + 3 = " + add(5, 3));
+Sample 5: Calculator - Division with Error Handling
+function safeDivide(a, b) {
+  if (b === 0) {
+    return "Cannot divide by zero!";
+  }
+  return a / b;
+}
+console.log("10 / 0 = " + safeDivide(10, 0));
+Sample 6: Using Function Expressions
+let multiply = function(a, b) {
+  return a * b;
+};
+console.log("6 x 7 = " + multiply(6, 7));
+Sample 7: Arrow Function Example
+const subtract = (a, b) => a - b;
+console.log("10 - 4 = " + subtract(10, 4));
+Sample 8: Simple Calculator Function Menu
+function calculate(a, b, operation) {
+  if (operation === "add") {
+    return a + b;
+  } else if (operation === "subtract") {
+    return a - b;
+  } else if (operation === "multiply") {
+    return a * b;
+  } else if (operation === "divide") {
+    if (b === 0) return "Error: Division by zero!";
+    return a / b;
+  } else {
+    return "Invalid operation";
+  }
+}
+console.log("8 multiplied by 2 = " + calculate(8, 2, "multiply"));
+Sample 9: Rock, Paper, Scissors – Computer Choice Function
+function getComputerChoice() {
+  let choices = ["rock", "paper", "scissors"];
+  let randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
+}
+console.log("Computer chose: " + getComputerChoice());
+Sample 10: Rock, Paper, Scissors – Winner Determination Function
+function determineWinner(player, computer) {
+  if (player === computer) {
+    return "Tie!";
+  } else if (
+    (player === "rock" && computer === "scissors") ||
+    (player === "paper" && computer === "rock") ||
+    (player === "scissors" && computer === "paper")
+  ) {
+    return "You win!";
+  } else {
+    return "Computer wins!";
+  }
+}
+console.log("Result: " + determineWinner("rock", getComputerChoice()));
