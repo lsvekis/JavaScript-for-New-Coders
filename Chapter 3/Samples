@@ -1,0 +1,86 @@
+Sample 1: Simple If Statement
+let isSunny = true;
+if (isSunny) {
+  console.log("Wear your sunglasses!");
+}
+Sample 2: Using Else with If
+let isRaining = false;
+if (isRaining) {
+  console.log("Don't forget your umbrella!");
+} else {
+  console.log("Enjoy the sunshine!");
+}
+Sample 3: Else If Chain for Grading
+let score = 88;
+if (score >= 90) {
+  console.log("Grade: A");
+} else if (score >= 80) {
+  console.log("Grade: B");
+} else if (score >= 70) {
+  console.log("Grade: C");
+} else {
+  console.log("Grade: F");
+}
+Sample 4: Checking Even or Odd
+let num = 11;
+if (num % 2 === 0) {
+  console.log(num + " is even.");
+} else {
+  console.log(num + " is odd.");
+}
+Sample 5: Age Checker for Adventures
+let age = 17;
+if (age < 10) {
+  console.log("Enjoy the kiddie rides!");
+} else if (age < 18) {
+  console.log("Time for the roller coaster!");
+} else {
+  console.log("Join the adventure club!");
+}
+Sample 6: Nested Conditionals
+let temperature = 65;
+if (temperature < 60) {
+  console.log("Wear a coat.");
+} else {
+  if (temperature > 80) {
+    console.log("It’s a scorcher!");
+  } else {
+    console.log("Enjoy the mild weather.");
+  }
+}
+Sample 7: Guess My Number – Basic Version
+let secretNumber = 8;
+let userGuess = 10;
+if (userGuess === secretNumber) {
+  console.log("Correct! You guessed the secret number.");
+} else if (userGuess < secretNumber) {
+  console.log("Too low, try a higher number.");
+} else {
+  console.log("Too high, try a lower number.");
+}
+Sample 8: Temperature Feedback with Logical Operators
+let temp = 75;
+if (temp >= 70 && temp <= 80) {
+  console.log("Perfect day for outdoor fun!");
+} else {
+  console.log("Plan accordingly for the weather.");
+}
+Sample 9: Decision Making with Multiple Conditions
+let timeOfDay = "morning";
+if (timeOfDay === "morning") {
+  console.log("Good morning! Time for breakfast.");
+} else if (timeOfDay === "afternoon") {
+  console.log("Good afternoon! How about lunch?");
+} else {
+  console.log("Good evening! Time for dinner.");
+}
+Sample 10: Extended Guess My Number Game
+let secret = 4;
+let guess = 2;
+if (guess === secret) {
+  console.log("Bingo! You got it right.");
+} else if (guess < secret) {
+  console.log("Your guess is too low. Aim higher!");
+} else {
+  console.log("Your guess is too high. Try a lower number!");
+}
