@@ -1,0 +1,65 @@
+Exercise 1: Blinking Text
+Task: Create a heading that blinks on and off every second using setInterval.
+Starter Code:
+<h1 id="blinker">Blinking Text!</h1>
+<script>
+  let blink = document.getElementById("blinker");
+  setInterval(() => {
+    blink.style.visibility = (blink.style.visibility === "hidden") ? "visible" : "hidden";
+  }, 1000);
+</script>
+Exercise 2: Countdown Timer
+Task: Build a countdown timer that starts from 10 and decreases every second until it reaches 0.
+Starter Code:
+<h2 id="timer">10</h2>
+<script>
+  let timeLeft = 10;
+  let timerDisplay = document.getElementById("timer");
+  let countdown = setInterval(() => {
+    timeLeft--;
+    timerDisplay.textContent = timeLeft;
+    if (timeLeft === 0) {
+      clearInterval(countdown);
+      timerDisplay.textContent = "Time's up!";
+    }
+  }, 1000);
+</script>
+Exercise 3: Moving Box Animation
+Task: Animate a box moving from the left side of the screen to the right using setInterval.
+Starter Code:
+<div id="box" style="width:50px; height:50px; background:red; position:absolute; top:100px; left:0;"></div>
+<script>
+  let box = document.getElementById("box");
+  let pos = 0;
+  let moveBox = setInterval(() => {
+    pos += 5;
+    box.style.left = pos + "px";
+    if (pos > window.innerWidth - 50) clearInterval(moveBox);
+  }, 50);
+</script>
+Exercise 4: Delayed Greeting
+Task: Use setTimeout to display a greeting message after 3 seconds when the page loads.
+Starter Code:
+<p id="greeting"></p>
+<script>
+  setTimeout(() => {
+    document.getElementById("greeting").textContent = "Hello, welcome to the site!";
+  }, 3000);
+</script>
+Exercise 5: Moving Button Game
+Task: Create a button that randomly moves to a new position on the screen every 2 seconds. Try clicking it to score points.
+Starter Code:
+<button id="movingBtn" style="position: absolute;">Catch Me!</button>
+<p id="points">Points: 0</p>
+<script>
+  let points = 0;
+  let btn = document.getElementById("movingBtn");
+  btn.addEventListener("click", () => {
+    points++;
+    document.getElementById("points").textContent = "Points: " + points;
+  });
+  setInterval(() => {
+    btn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+    btn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+  }, 2000);
+</script>
