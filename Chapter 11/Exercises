@@ -1,0 +1,73 @@
+Mini Project: Build a Custom Greeting Generator
+
+
+Task: Create a form where users enter their name, and when they submit, a personalized greeting appears on the page using template literals.
+Starter Code:
+<input type="text" id="userName" placeholder="Enter your name">
+<button onclick="generateGreeting()">Greet Me!</button>
+<p id="greetingOutput"></p>
+<script>
+  function generateGreeting() {
+    const name = document.getElementById("userName").value;
+    document.getElementById("greetingOutput").textContent = `Hello, ${name}! Welcome to JavaScript!`;
+  }
+</script>
+Interactive Debugging Challenge
+
+
+Task: Write a function that intentionally has a common mistake (like using = instead of ===). Challenge yourself to use the browser console to find and fix the error.
+Starter Code:
+function isAdult(age) {
+  if (age = 18) {
+    return "Adult";
+  } else {
+    return "Not Adult";
+  }
+}
+console.log(isAdult(18));
+// Debug and fix the mistake!
+Object Destructuring Game
+
+
+Task: Create an object with properties (like a character with name, age, and hobby). Destructure the object and display each property in a list on the page.
+Starter Code:
+<ul id="characterList"></ul>
+<script>
+  const character = { name: "Sam", age: 16, hobby: "skateboarding" };
+  const { name, age, hobby } = character;
+  document.getElementById("characterList").innerHTML = `<li>Name: ${name}</li><li>Age: ${age}</li><li>Hobby: ${hobby}</li>`;
+</script>
+Promise Practice: Fake Data Loader
+
+
+Task: Simulate data loading by creating a promise that resolves after 2 seconds. Display "Loading..." until the promise is resolved, then show "Data Loaded!".
+Starter Code:
+<p id="loadingMessage">Loading...</p>
+<script>
+  const fakeLoader = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Data Loaded!");
+    }, 2000);
+  });
+  fakeLoader.then(message => {
+    document.getElementById("loadingMessage").textContent = message;
+  });
+</script>
+LocalStorage High Score Tracker
+
+
+Task: Create a simple function that saves and displays a high score using localStorage. Allow users to input a score and see if it beats the stored high score.
+Starter Code:
+<input type="number" id="scoreInput" placeholder="Enter your score">
+<button onclick="saveHighScore()">Save Score</button>
+<p id="highScoreDisplay">High Score: 0</p>
+<script>
+  function saveHighScore() {
+    const score = parseInt(document.getElementById("scoreInput").value);
+    const highScore = localStorage.getItem("highScore") || 0;
+    if (score > highScore) {
+      localStorage.setItem("highScore", score);
+    }
+    document.getElementById("highScoreDisplay").textContent = "High Score: " + localStorage.getItem("highScore");
+  }
+</script>
