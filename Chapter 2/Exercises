@@ -1,0 +1,56 @@
+Variable Scavenger Hunt:
+
+
+Create variables for your favorite movie, hobby, and sport.
+Use console.log() to display them in a creative sentence.
+Example:
+let favoriteMovie = "The Lion King";
+let hobby = "drawing";
+let sport = "soccer";
+console.log("I love watching " + favoriteMovie + ", " + hobby + " in my free time, and playing " + sport + " on weekends!");
+Number Cruncher Challenge:
+
+
+Create two number variables and perform different arithmetic operations (addition, subtraction, multiplication, division).
+Example:
+let a = 20;
+let b = 4;
+console.log("Addition: " + (a + b));
+console.log("Subtraction: " + (a - b));
+console.log("Multiplication: " + (a * b));
+console.log("Division: " + (a / b));
+Text Mashup:
+
+
+Declare variables for a greeting, your name, and a fun fact.
+Use string concatenation to create a sentence.
+Example:
+let greeting = "Hey there!";
+let myName = "Taylor";
+let funFact = "I can solve a Rubik's Cube in under a minute.";
+console.log(greeting + " I'm " + myName + ". Did you know? " + funFact);
+Variable Quiz:
+
+
+Write a small program that declares three variables.
+Ask the user to predict what the console.log() statement will output.
+Then, run the code to check their prediction.
+Example:
+let x = 5;
+let y = 10;
+let result = x * y;
+console.log("The result is: " + result);
+Mad Libs Remix:
+
+
+Modify the Mad Libs game from above.
+Add extra variables (like a second adjective or a verb) to make the story longer and even more entertaining.
+Example:
+let adjective1 = "brave";
+let adjective2 = "mysterious";
+let noun = "wizard";
+let verb = "casts";
+let object = "spells";
+let place = "enchanted forest";
+let extendedStory = "In a " + adjective1 + " and " + adjective2 + " land, a " + noun + " " + verb + " powerful " + object + " in the " + place + ".";
+console.log(extendedStory);
