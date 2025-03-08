@@ -1,0 +1,65 @@
+Exercise 1: Update a Paragraph
+Task: Create an HTML page with a paragraph. Write a JavaScript function that changes the text of the paragraph when a button is clicked.
+Starter Code:
+<p id="message">This is the original message.</p>
+<button onclick="updateMessage()">Change Message</button>
+<script>
+  function updateMessage() {
+    document.getElementById("message").textContent = "The message has been updated!";
+  }
+</script>
+Exercise 2: Image Swap
+Task: Add two images to your page and a button. Write a function to swap the source of the images when the button is clicked.
+Starter Code:
+<img id="img1" src="https://via.placeholder.com/150?text=Image+1" alt="Image 1">
+<img id="img2" src="https://via.placeholder.com/150?text=Image+2" alt="Image 2">
+<button onclick="swapImages()">Swap Images</button>
+<script>
+  function swapImages() {
+    let image1 = document.getElementById("img1");
+    let image2 = document.getElementById("img2");
+    let temp = image1.src;
+    image1.src = image2.src;
+    image2.src = temp;
+  }
+</script>
+Exercise 3: List Highlighter
+Task: Create an unordered list with several items. Write a function that changes the color of an item when it is clicked.
+Starter Code:
+<ul>
+  <li onclick="highlight(this)">Item 1</li>
+  <li onclick="highlight(this)">Item 2</li>
+  <li onclick="highlight(this)">Item 3</li>
+</ul>
+<script>
+  function highlight(element) {
+    element.style.color = "orange";
+  }
+</script>
+Exercise 4: Dynamic Background
+Task: Build a simple page with a button that randomly changes the background color each time it’s pressed.
+Starter Code:
+<button onclick="changeBackground()">Random Background</button>
+<script>
+  function changeBackground() {
+    let colors = ["pink", "lightblue", "lavender", "lightgreen", "yellow"];
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+  }
+</script>
+Exercise 5: Hide and Show Content
+Task: Create a button that toggles the visibility of a paragraph (i.e., shows it if hidden and hides it if shown).
+Starter Code:
+<p id="secretMessage">This is a secret message!</p>
+<button onclick="toggleVisibility()">Toggle Message</button>
+<script>
+  function toggleVisibility() {
+    let message = document.getElementById("secretMessage");
+    if (message.style.display === "none") {
+      message.style.display = "block";
+    } else {
+      message.style.display = "none";
+    }
+  }
+</script>
+
