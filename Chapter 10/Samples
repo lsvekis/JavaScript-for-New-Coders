@@ -1,0 +1,77 @@
+Sample 1: Initial Quiz Data Structure
+const quizData = [
+  { question: "What is the capital of Japan?", answers: ["Tokyo", "Seoul", "Beijing", "Bangkok"], correct: 0 },
+  { question: "Which element has the chemical symbol 'O'?", answers: ["Gold", "Oxygen", "Osmium", "Zinc"], correct: 1 }
+];
+Sample 2: Loading a Quiz Question into the DOM
+function loadQuestion(index) {
+  const q = quizData[index];
+  document.getElementById("questionArea").textContent = q.question;
+  document.getElementById("answersArea").innerHTML = "";
+  q.answers.forEach((answer, i) => {
+    let btn = document.createElement("button");
+    btn.textContent = answer;
+    btn.className = "answerBtn";
+    btn.addEventListener("click", () => checkAnswer(i));
+    document.getElementById("answersArea").appendChild(btn);
+  });
+}
+Sample 3: Checking the Player’s Answer
+function checkAnswer(selectedIndex) {
+  const currentQ = quizData[currentQuestion];
+  if (selectedIndex === currentQ.correct) {
+    feedback.textContent = "Correct!";
+    score++;
+  } else {
+    feedback.textContent = "Incorrect. The correct answer was: " + currentQ.answers[currentQ.correct];
+  }
+  document.getElementById("score").textContent = "Score: " + score;
+  setTimeout(nextQuestion, 1500);
+}
+Sample 4: Function to Move to the Next Question
+function nextQuestion() {
+  currentQuestion++;
+  if (currentQuestion < quizData.length) {
+    loadQuestion(currentQuestion);
+  } else {
+    document.getElementById("questionArea").textContent = "Quiz Completed!";
+    document.getElementById("answersArea").innerHTML = "";
+    feedback.textContent = "";
+  }
+}
+Sample 5: Using setTimeout to Delay Transition
+setTimeout(() => {
+  console.log("Moving to the next question...");
+}, 1500);
+Sample 6: Updating the Score Display
+function updateScoreDisplay() {
+  document.getElementById("score").textContent = "Score: " + score;
+}
+Sample 7: Randomizing Quiz Questions (Shuffle)
+function shuffleQuizData() {
+  for (let i = quizData.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [quizData[i], quizData[j]] = [quizData[j], quizData[i]];
+  }
+}
+Sample 8: Handling a Button Click to Restart the Quiz
+document.getElementById("restartBtn").addEventListener("click", function() {
+  currentQuestion = 0;
+  score = 0;
+  updateScoreDisplay();
+  loadQuestion(currentQuestion);
+});
+Sample 9: Storing and Retrieving a High Score with localStorage
+function saveHighScore() {
+  const highScore = localStorage.getItem("highScore") || 0;
+  if (score > highScore) {
+    localStorage.setItem("highScore", score);
+  }
+}
+Sample 10: Complete Initialization of the Quiz Game
+// Shuffle questions (optional)
+shuffleQuizData();
+// Start quiz from first question
+let currentQuestion = 0;
+let score = 0;
+loadQuestion(currentQuestion);
