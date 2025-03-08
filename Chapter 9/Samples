@@ -1,0 +1,107 @@
+Sample 1: Basic setTimeout Usage
+setTimeout(() => {
+  console.log("This runs after 2 seconds.");
+}, 2000);
+Sample 2: Repeating Function with setInterval
+let count = 0;
+let intervalId = setInterval(() => {
+  count++;
+  console.log("Count: " + count);
+  if (count === 5) clearInterval(intervalId);
+}, 1000);
+Sample 3: Simple Animation of a Moving Box
+<div id="movingBox" style="width:50px; height:50px; background:green; position:absolute; left:0; top:50px;"></div>
+<script>
+  let pos = 0;
+  let box = document.getElementById("movingBox");
+  let anim = setInterval(() => {
+    pos += 5;
+    box.style.left = pos + "px";
+    if (pos > window.innerWidth - 50) clearInterval(anim);
+  }, 50);
+</script>
+Sample 4: Fading Text with CSS and JavaScript
+<p id="fadeText" style="opacity: 1; transition: opacity 1s;">Watch me fade!</p>
+<script>
+  setTimeout(() => {
+    document.getElementById("fadeText").style.opacity = 0;
+  }, 2000);
+</script>
+Sample 5: Countdown Timer Display
+<h2 id="countdown">10</h2>
+<script>
+  let time = 10;
+  let timer = setInterval(() => {
+    time--;
+    document.getElementById("countdown").textContent = time;
+    if (time === 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").textContent = "Blast off!";
+    }
+  }, 1000);
+</script>
+Sample 6: Delayed Greeting Message
+<p id="greeting"></p>
+<script>
+  setTimeout(() => {
+    document.getElementById("greeting").textContent = "Hello, world!";
+  }, 3000);
+</script>
+Sample 7: Recursive setTimeout Animation
+<div id="recursiveBox" style="width:50px; height:50px; background:purple; position:absolute; left:0; top:150px;"></div>
+<script>
+  let pos2 = 0;
+  function animateBox() {
+    pos2 += 5;
+    document.getElementById("recursiveBox").style.left = pos2 + "px";
+    if (pos2 < window.innerWidth - 50) {
+      setTimeout(animateBox, 50);
+    }
+  }
+  animateBox();
+</script>
+Sample 8: Simple Falling Object Animation (Star)
+<div id="star" style="width:30px; height:30px; background:yellow; position:absolute; left:100px; top:0;"></div>
+<script>
+  let starTop = 0;
+  let starAnim = setInterval(() => {
+    starTop += 4;
+    document.getElementById("star").style.top = starTop + "px";
+    if (starTop > window.innerHeight) clearInterval(starAnim);
+  }, 30);
+</script>
+Sample 9: Moving Button Game (Interactive Button)
+<button id="moveBtn" style="position: absolute;">Catch Me!</button>
+<script>
+  setInterval(() => {
+    document.getElementById("moveBtn").style.left = Math.random() * (window.innerWidth - 100) + "px";
+    document.getElementById("moveBtn").style.top = Math.random() * (window.innerHeight - 50) + "px";
+  }, 2000);
+</script>
+Sample 10: Catch the Falling Stars Game (Core Loop)
+<div id="gameArea" style="position: relative; width:100vw; height:100vh; background:#000;"></div>
+<script>
+  function createFallingStar() {
+    let star = document.createElement("div");
+    star.style.position = "absolute";
+    star.style.width = "30px";
+    star.style.height = "30px";
+    star.style.background = "url('https://placehold.co/30?text=*') no-repeat center center";
+    star.style.backgroundSize = "cover";
+    star.style.left = Math.random() * (window.innerWidth - 30) + "px";
+    star.style.top = "-30px";
+    document.getElementById("gameArea").appendChild(star);
+    let fall = setInterval(() => {
+      star.style.top = (parseFloat(star.style.top) + 3) + "px";
+      if (parseFloat(star.style.top) > window.innerHeight) {
+        clearInterval(fall);
+        star.remove();
+      }
+    }, 20);
+    star.addEventListener("click", () => {
+      star.remove();
+      // Increase score here (not implemented in this sample)
+    });
+  }
+  setInterval(createFallingStar, 800);
+</script>
