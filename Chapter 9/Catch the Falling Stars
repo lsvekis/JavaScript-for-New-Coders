@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catch the Falling Stars</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+    }
+    #gameContainer {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to bottom, #001, #113);
+    }
+    .star {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('https://placehold.co/30?text=*') no-repeat center center;
+      background-size: cover;
+      cursor: pointer;
+    }
+    #scoreBoard {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="gameContainer">
+    <div id="scoreBoard">Score: 0</div>
+  </div>
+  <script>
+    let score = 0;
+    const gameContainer = document.getElementById("gameContainer");
+    const scoreBoard = document.getElementById("scoreBoard");
+    // Function to update the score display
+    function updateScore() {
+      scoreBoard.textContent = "Score: " + score;
+    }
+    // Function to create a new star
+    function createStar() {
+      const star = document.createElement("div");
+      star.className = "star";
+      // Random horizontal position within the container width
+      star.style.left = Math.random() * (window.innerWidth - 30) + "px";
+      star.style.top = "-30px"; // Start above the container
+      // When star is clicked, remove it and increase score
+      star.addEventListener("click", function() {
+        score++;
+        updateScore();
+        star.remove();
+      });
+      gameContainer.appendChild(star);
+      // Animate the star falling
+      let fallInterval = setInterval(function() {
+        let currentTop = parseFloat(star.style.top);
+        star.style.top = (currentTop + 3) + "px";
+        // Remove the star if it goes out of view
+        if (currentTop > window.innerHeight) {
+          clearInterval(fallInterval);
+          star.remove();
+        }
+      }, 20);
+    }
+    // Create a new star every 800 milliseconds
+    setInterval(createStar, 800);
+  </script>
+</body>
+</html>
