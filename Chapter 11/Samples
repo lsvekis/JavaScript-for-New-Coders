@@ -1,0 +1,50 @@
+Sample 1: Arrow Function Greeting
+const greetUser = (name) => `Hello, ${name}! Welcome to advanced JavaScript.`;
+console.log(greetUser("Jordan"));
+Sample 2: Object Destructuring
+const book = { title: "JavaScript Adventures", author: "Alex", year: 2025 };
+const { title, author, year } = book;
+console.log(`Title: ${title}, Author: ${author}, Year: ${year}`);
+Sample 3: Using Template Literals
+let score = 95;
+let message = `Congratulations! Your score is ${score}.`;
+console.log(message);
+Sample 4: Spread Operator with Arrays
+const original = [1, 2, 3];
+const extended = [0, ...original, 4];
+console.log(extended); // Output: [0, 1, 2, 3, 4]
+Sample 5: Promise Example
+const delayMessage = new Promise((resolve) => {
+  setTimeout(() => resolve("Promise resolved!"), 1500);
+});
+delayMessage.then((msg) => console.log(msg));
+Sample 6: Simple Callback Function
+function processData(data, callback) {
+  callback(data * 2);
+}
+processData(5, (result) => console.log("Result is:", result));
+Sample 7: Using localStorage
+localStorage.setItem("favoriteColor", "blue");
+console.log("Favorite Color:", localStorage.getItem("favoriteColor"));
+Sample 8: Recursive setTimeout Animation
+let pos = 0;
+function animate() {
+  pos += 10;
+  console.log("Position:", pos);
+  if (pos < 100) setTimeout(animate, 200);
+}
+animate();
+Sample 9: Function to Shuffle an Array (Fisher-Yates)
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+console.log(shuffle([1, 2, 3, 4, 5]));
+Sample 10: Simple DOM Manipulation
+const newDiv = document.createElement("div");
+newDiv.textContent = "I was created dynamically!";
+newDiv.style.backgroundColor = "lightgreen";
+document.body.appendChild(newDiv);
