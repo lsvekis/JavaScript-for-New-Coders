@@ -1,0 +1,24 @@
+function getComputerChoice() {
+  let choices = ["rock", "paper", "scissors"];
+  let randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
+}
+function determineWinner(player, computer) {
+  if (player === computer) {
+    return "It's a tie!";
+  } else if (
+    (player === "rock" && computer === "scissors") ||
+    (player === "paper" && computer === "rock") ||
+    (player === "scissors" && computer === "paper")
+  ) {
+    return "You win!";
+  } else {
+    return "Computer wins!";
+  }
+}
+// Game simulation
+let playerChoice = "rock"; // You can change this value to "paper" or "scissors"
+let computerChoice = getComputerChoice();
+console.log("Player chose: " + playerChoice);
+console.log("Computer chose: " + computerChoice);
+console.log(determineWinner(playerChoice, computerChoice));
