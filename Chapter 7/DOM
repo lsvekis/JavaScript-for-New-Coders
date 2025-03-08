@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Example</title>
+</head>
+<body>
+  <h1 id="title">Hello, World!</h1>
+  <p id="description">This is a simple web page.</p>
+  <button id="changeBtn">Change Text</button>
+  <script>
+    let button = document.getElementById("changeBtn");
+    button.addEventListener("click", function() {
+      let title = document.getElementById("title");
+      title.textContent = "Welcome to Interactive JavaScript!";
+    });
+  </script>
+</body>
+</html>
