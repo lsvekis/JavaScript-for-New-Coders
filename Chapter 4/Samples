@@ -1,0 +1,68 @@
+Sample 1: Basic For Loop
+// Prints numbers 1 to 5
+for (let i = 1; i <= 5; i++) {
+  console.log("Number: " + i);
+}
+Sample 2: Simple While Loop
+// Counts down from 5 to 1
+let count = 5;
+while (count > 0) {
+  console.log("Countdown: " + count);
+  count--;
+}
+Sample 3: For Loop with Custom Increment
+// Prints even numbers from 2 to 10
+for (let i = 2; i <= 10; i += 2) {
+  console.log("Even: " + i);
+}
+Sample 4: Do-While Loop Example
+// Do-while loop prints a message at least once
+let x = 0;
+do {
+  console.log("x is " + x);
+  x++;
+} while (x < 3);
+Sample 5: Counting Sheep Simulator
+// Counts 10 sheep jumping over a fence
+for (let sheep = 1; sheep <= 10; sheep++) {
+  console.log("Sheep #" + sheep + " is leaping over the fence!");
+}
+console.log("Time to snooze... zzz");
+Sample 6: Multiplication Table Generator
+// Generates a multiplication table for the number 5
+let num = 5;
+console.log("Multiplication Table for " + num + ":");
+for (let i = 1; i <= 10; i++) {
+  console.log(num + " x " + i + " = " + (num * i));
+}
+Sample 7: Using Continue in a Loop
+// Skips printing the number 3 in a sequence from 1 to 5
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) continue;
+  console.log("Value: " + i);
+}
+Sample 8: Nested Loop for Pattern Drawing
+// Draws a simple 3x3 grid of stars
+for (let i = 0; i < 3; i++) {
+  let line = "";
+  for (let j = 0; j < 3; j++) {
+    line += "* ";
+  }
+  console.log(line);
+}
+Sample 9: Loop with Random Number Generation
+// Keeps generating a random number between 1 and 10 until it gets 7
+let target = 7;
+let randomNum;
+do {
+  randomNum = Math.floor(Math.random() * 10) + 1;
+  console.log("Generated: " + randomNum);
+} while (randomNum !== target);
+console.log("Target " + target + " reached!");
+Sample 10: Loop with User-Defined Range (Conceptual)
+// Concept: Generate a list of numbers based on user input (assume user input is 8)
+let userLimit = 8; // Imagine this value is given by the user
+console.log("Counting up to " + userLimit + ":");
+for (let i = 1; i <= userLimit; i++) {
+  console.log(i);
+}
