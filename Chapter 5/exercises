@@ -1,0 +1,45 @@
+Exercise 1: Build Your Dream List
+Task: Create an array of your top five favorite movies or video games.
+Activity: Use console.log() to display the entire list and then print the first and last items separately.
+Starter Code:
+let favorites = ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5"];
+console.log("All favorites:", favorites);
+console.log("First favorite:", favorites[0]);
+console.log("Last favorite:", favorites[favorites.length - 1]);
+Exercise 2: Snack Attack!
+Task: Make an array of your favorite snacks. Then, add a new snack to the beginning and remove the last snack.
+Activity: Observe how the array changes with unshift() and pop().
+Starter Code:
+let snacks = ["Chips", "Cookies", "Pretzels"];
+snacks.unshift("Fruit Snack"); // Add at beginning
+console.log("After unshift:", snacks);
+snacks.pop(); // Remove the last item
+console.log("After pop:", snacks);
+Exercise 3: Array Splice Fun
+Task: Create an array of numbers from 1 to 5. Use splice() to remove the third number and insert a new number (e.g., 99) in its place.
+Activity: Print the array before and after using splice().
+Starter Code:
+let numbers = [1, 2, 3, 4, 5];
+console.log("Before splice:", numbers);
+numbers.splice(2, 1, 99);  // Remove 1 element at index 2 and insert 99
+console.log("After splice:", numbers);
+Exercise 4: Slice Out a Subset
+Task: Create an array of letters and use slice() to extract a portion of the array (for example, letters from index 2 to 5).
+Activity: Display the original array and the new sliced array.
+Starter Code:
+let letters = ["A", "B", "C", "D", "E", "F", "G"];
+let subset = letters.slice(2, 6); // Extract from index 2 to 5
+console.log("Original letters:", letters);
+console.log("Sliced subset:", subset);
+Exercise 5: Search for Treasure
+Task: Create an array of random words. Ask the user (or set a variable) for a word to find and use indexOf() to search for it.
+Activity: Display a message if the word is found and at what position, or inform the user if it isn’t found.
+Starter Code:
+let words = ["treasure", "island", "ship", "ocean", "map"];
+let searchWord = "ship"; // You can change this word
+let position = words.indexOf(searchWord);
+if (position !== -1) {
+  console.log(searchWord + " found at position " + position);
+} else {
+  console.log(searchWord + " not found in the array.");
+}
