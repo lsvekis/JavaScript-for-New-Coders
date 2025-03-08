@@ -1,0 +1,50 @@
+Exercise 1: Simple Counter Challenge
+Task: Write a loop that counts from 1 to 20.
+Activity: Modify the starting and ending points to see how the loop changes.
+Starter Code:
+for (let i = 1; i <= 20; i++) {
+  console.log("Count: " + i);
+}
+Exercise 2: Even Numbers Finder
+Task: Create a loop that prints only even numbers between 1 and 30.
+Activity: Experiment with different ranges.
+Starter Code:
+for (let i = 1; i <= 30; i++) {
+  if (i % 2 === 0) {
+    console.log("Even number: " + i);
+  }
+}
+Exercise 3: While Loop Countdown
+Task: Build a while loop that counts down from 10 to 1.
+Activity: Try adjusting the loop so it stops at different numbers.
+Starter Code:
+let count = 10;
+while (count >= 1) {
+  console.log("Countdown: " + count);
+  count--;
+}
+console.log("Blast off!");
+Exercise 4: Random Number Guess Loop
+Task: Create a loop that keeps generating a random number until it equals a target number (e.g., 5).
+Activity: Notice how many tries it takes to get the target.
+Starter Code:
+let target = 5;
+let randomNumber = Math.floor(Math.random() * 10) + 1;
+while (randomNumber !== target) {
+  console.log("Generated: " + randomNumber);
+  randomNumber = Math.floor(Math.random() * 10) + 1;
+}
+console.log("Got the target number: " + target);
+Exercise 5: Nested Loop Pattern Drawing
+Task: Use a nested loop to draw a simple pattern (like a rectangle of stars).
+Activity: Experiment with different shapes and sizes.
+Starter Code:
+let rows = 5;
+let cols = 10;
+for (let i = 0; i < rows; i++) {
+  let line = "";
+  for (let j = 0; j < cols; j++) {
+    line += "* ";
+  }
+  console.log(line);
+}
