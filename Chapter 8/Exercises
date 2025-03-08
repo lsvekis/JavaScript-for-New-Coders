@@ -1,0 +1,66 @@
+Exercise 1: Text Changer
+Task: Create a button that, when clicked, changes the text of a heading.
+Activity: Experiment with different messages and text styles.
+Starter Code:
+<h2 id="title">Original Title</h2>
+<button onclick="changeTitle()">Change Title</button>
+<script>
+  function changeTitle() {
+    document.getElementById("title").textContent = "Title Updated!";
+  }
+</script>
+Exercise 2: Hover Color Switcher
+Task: Build a div that changes its background color when the mouse hovers over it.
+Activity: Try using different colors for mouseover and mouseout.
+Starter Code:
+<div id="colorBox" style="width:200px; height:200px; background-color: lightgray;">Hover Over Me!</div>
+<script>
+  let box = document.getElementById("colorBox");
+  box.addEventListener("mouseover", function() {
+    box.style.backgroundColor = "orange";
+  });
+  box.addEventListener("mouseout", function() {
+    box.style.backgroundColor = "lightgray";
+  });
+</script>
+Exercise 3: Keypress Reaction
+Task: Create an input field that displays a message when any key is pressed.
+Activity: Display the key that was pressed in real-time.
+Starter Code:
+<input type="text" id="inputField" placeholder="Type something...">
+<p id="output"></p>
+<script>
+  let input = document.getElementById("inputField");
+  input.addEventListener("keypress", function(e) {
+    document.getElementById("output").textContent = "You pressed: " + e.key;
+  });
+</script>
+Exercise 4: Mouse Move Tracker
+Task: Build a function that tracks the mouse's coordinates within a div and displays them.
+Activity: Use the coordinates to update a live display.
+Starter Code:
+<div id="tracker" style="width:300px; height:150px; border:1px solid #000;">
+  Move your mouse here!
+</div>
+<p id="coords">Coordinates: (0, 0)</p>
+<script>
+  let tracker = document.getElementById("tracker");
+  tracker.addEventListener("mousemove", function(e) {
+    let x = e.offsetX;
+    let y = e.offsetY;
+    document.getElementById("coords").textContent = "Coordinates: (" + x + ", " + y + ")";
+  });
+</script>
+Exercise 5: Toggle Image Visibility
+Task: Create an image and a button that toggles the image’s visibility on click.
+Activity: Experiment with adding fade effects using CSS transitions.
+Starter Code:
+<img id="toggleImage" src="https://via.placeholder.com/150?text=Hello" alt="Sample Image">
+<button onclick="toggleImage()">Toggle Image</button>
+<script>
+  function toggleImage() {
+    let img = document.getElementById("toggleImage");
+    img.style.display = (img.style.display === "none") ? "block" : "none";
+  }
+</script>
+
