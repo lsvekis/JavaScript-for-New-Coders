@@ -1,0 +1,73 @@
+Even or Odd Checker:
+
+
+Task: Create a program that checks if a number is even or odd.
+Activity: Let the user change the number and see the result.
+Starter Code:
+let number = 7; // Change this value
+if (number % 2 === 0) {
+  console.log(number + " is even.");
+} else {
+  console.log(number + " is odd.");
+}
+Temperature Advisor:
+
+
+Task: Write a program that suggests what to wear based on the temperature.
+Activity: Set different temperature values and see if your advice changes.
+Starter Code:
+let temperature = 72; // Try changing this number
+if (temperature < 60) {
+  console.log("It's chilly—wear a jacket!");
+} else if (temperature <= 80) {
+  console.log("Perfect weather for a t-shirt!");
+} else {
+  console.log("It's hot—stay cool in shorts!");
+}
+Letter Grader:
+
+
+Task: Create a program that converts a numerical score to a letter grade.
+Activity: Input different scores and test your grade boundaries.
+Starter Code:
+let score = 85; // Change this value
+if (score >= 90) {
+  console.log("Grade: A");
+} else if (score >= 80) {
+  console.log("Grade: B");
+} else if (score >= 70) {
+  console.log("Grade: C");
+} else if (score >= 60) {
+  console.log("Grade: D");
+} else {
+  console.log("Grade: F");
+}
+Adventure Decision:
+
+
+Task: Write a program that suggests an adventure based on age.
+Activity: Input ages and see which adventure is recommended.
+Starter Code:
+let age = 16; // Modify the age to test
+if (age < 10) {
+  console.log("Time for a fun playground visit!");
+} else if (age < 18) {
+  console.log("How about a thrilling roller coaster ride?");
+} else {
+  console.log("Adventure awaits with extreme sports!");
+}
+Guess My Number Game Starter:
+
+
+Task: Start building your number guessing game by setting a secret number and comparing it with a guess.
+Activity: Experiment with different guesses and add hints.
+Starter Code:
+let secretNumber = 5;
+let guess = 3; // Change this to test different outcomes
+if (guess === secretNumber) {
+  console.log("You guessed it! Great job!");
+} else if (guess < secretNumber) {
+  console.log("Too low, try guessing higher!");
+} else {
+  console.log("Too high, try guessing lower!");
+}
