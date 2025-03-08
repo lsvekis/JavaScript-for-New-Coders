@@ -1,0 +1,48 @@
+Sample 1: Creating an Array of Colors
+let colors = ["red", "green", "blue"];
+console.log("Colors:", colors);
+Sample 2: Using push() to Add an Element
+let fruits = ["apple", "banana"];
+fruits.push("orange");
+console.log("Fruits:", fruits);
+Sample 3: Removing an Element with pop()
+let cities = ["New York", "Paris", "Tokyo"];
+let removedCity = cities.pop();
+console.log("Removed City:", removedCity);
+console.log("Remaining Cities:", cities);
+Sample 4: Adding an Element with unshift()
+let animals = ["dog", "cat"];
+animals.unshift("elephant");
+console.log("Animals:", animals);
+Sample 5: Removing the First Element with shift()
+let instruments = ["guitar", "piano", "drums"];
+let firstInstrument = instruments.shift();
+console.log("Removed Instrument:", firstInstrument);
+console.log("Remaining Instruments:", instruments);
+Sample 6: Replacing Elements with splice()
+let numbers = [10, 20, 30, 40];
+numbers.splice(1, 2, 99, 100); // Removes 20 and 30, inserts 99 and 100 at index 1
+console.log("Numbers after splice:", numbers);
+Sample 7: Extracting a Subarray with slice()
+let letters = ["A", "B", "C", "D", "E"];
+let subLetters = letters.slice(1, 4); // Extracts "B", "C", "D"
+console.log("Subarray:", subLetters);
+Sample 8: Finding an Element's Index with indexOf()
+let pets = ["dog", "cat", "parrot"];
+let petIndex = pets.indexOf("cat");
+console.log("Index of cat:", petIndex);
+Sample 9: Combining Arrays with concat()
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+let combined = array1.concat(array2);
+console.log("Combined Array:", combined);
+Sample 10: Random Joke Teller Project
+let jokes = [
+  "What do you call a bear with no teeth? A gummy bear!",
+  "Why don't scientists trust atoms? Because they make up everything!",
+  "How do you organize a space party? You planet!",
+  "What do you call a fake noodle? An impasta!",
+  "Why did the bicycle fall over? It was two tired!"
+];
+let randomIndex = Math.floor(Math.random() * jokes.length);
+console.log("Here's a joke for you: " + jokes[randomIndex]);
