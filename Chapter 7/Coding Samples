@@ -1,0 +1,66 @@
+Sample 1: Changing Text Content
+<h2 id="headline">Original Headline</h2>
+<script>
+  document.getElementById("headline").textContent = "Updated Headline!";
+</script>
+Sample 2: Modifying CSS Styles
+<p id="intro">This is a paragraph.</p>
+<script>
+  document.getElementById("intro").style.fontSize = "24px";
+  document.getElementById("intro").style.color = "purple";
+</script>
+Sample 3: Changing an Image Source
+<img id="myImage" src="https://via.placeholder.com/150?text=Old+Image" alt="Old Image">
+<script>
+  document.getElementById("myImage").src = "https://via.placeholder.com/150?text=New+Image";
+</script>
+Sample 4: Adding a New Element
+<div id="container"></div>
+<script>
+  let newPara = document.createElement("p");
+  newPara.textContent = "This is a new paragraph!";
+  document.getElementById("container").appendChild(newPara);
+</script>
+Sample 5: Removing an Element
+<p id="removeMe">This text will be removed.</p>
+<script>
+  let element = document.getElementById("removeMe");
+  element.remove();
+</script>
+Sample 6: Toggling Visibility
+<p id="toggleText">Toggle my visibility!</p>
+<button onclick="toggle()">Toggle</button>
+<script>
+  function toggle() {
+    let el = document.getElementById("toggleText");
+    el.style.display = (el.style.display === "none") ? "block" : "none";
+  }
+</script>
+Sample 7: Changing Background Color
+<button id="bgButton">Change Background</button>
+<script>
+  document.getElementById("bgButton").addEventListener("click", function() {
+    document.body.style.backgroundColor = "lightcoral";
+  });
+</script>
+Sample 8: Event Listener for Mouseover
+<p id="hoverText">Hover over me!</p>
+<script>
+  document.getElementById("hoverText").addEventListener("mouseover", function() {
+    this.style.color = "green";
+  });
+  document.getElementById("hoverText").addEventListener("mouseout", function() {
+    this.style.color = "black";
+  });
+</script>
+Sample 9: Using querySelector()
+<div class="box">This is a box.</div>
+<script>
+  let box = document.querySelector(".box");
+  box.style.border = "2px solid red";
+</script>
+Sample 10: Inserting HTML with innerHTML
+<div id="content"></div>
+<script>
+  document.getElementById("content").innerHTML = "<h3>Inserted Heading</h3><p>Inserted paragraph text.</p>";
+</script>
