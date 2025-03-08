@@ -1,0 +1,7 @@
+let snacks = ["Chips", "Chocolate", "Cookies"];
+snacks.push("Candy");             // Adds "Candy" at the end
+console.log(snacks);              // ["Chips", "Chocolate", "Cookies", "Candy"]
+snacks.pop();                     // Removes the last item ("Candy")
+console.log(snacks);              // ["Chips", "Chocolate", "Cookies"]
+snacks.unshift("Fruit");          // Adds "Fruit" at the beginning
+console.log(snacks);              // ["Fruit", "Chips", "Chocolate", "Cookies"]
