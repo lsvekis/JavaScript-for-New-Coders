@@ -1,0 +1,74 @@
+Sample 1: Changing Text on Click
+<h2 id="headline">Click the button to change me!</h2>
+<button onclick="document.getElementById('headline').textContent = 'Text Changed!'">Change Text</button>
+Sample 2: Mouseover to Change Color
+<p id="hoverPara">Hover over me!</p>
+<script>
+  let hoverPara = document.getElementById("hoverPara");
+  hoverPara.addEventListener("mouseover", () => {
+    hoverPara.style.color = "blue";
+  });
+  hoverPara.addEventListener("mouseout", () => {
+    hoverPara.style.color = "black";
+  });
+</script>
+Sample 3: Displaying Mouse Coordinates
+<div id="area" style="width:300px; height:150px; border:1px solid #333;">Move mouse here!</div>
+<p id="coords">X: 0, Y: 0</p>
+<script>
+  let area = document.getElementById("area");
+  area.addEventListener("mousemove", function(e) {
+    document.getElementById("coords").textContent = "X: " + e.offsetX + ", Y: " + e.offsetY;
+  });
+</script>
+Sample 4: Keypress Alert
+<input type="text" id="keyInput" placeholder="Press any key...">
+<script>
+  document.getElementById("keyInput").addEventListener("keypress", function(e) {
+    alert("You pressed: " + e.key);
+  });
+</script>
+Sample 5: Toggle Element Visibility
+<p id="toggleText">Toggle my visibility with the button below!</p>
+<button onclick="document.getElementById('toggleText').style.display = (document.getElementById('toggleText').style.display === 'none') ? 'block' : 'none';">Toggle</button>
+Sample 6: Changing Background with a Button Click
+<button id="bgChanger">Change Background Color</button>
+<script>
+  document.getElementById("bgChanger").addEventListener("click", function() {
+    document.body.style.backgroundColor = "lightyellow";
+  });
+</script>
+Sample 7: Interactive Pet Reaction
+<img id="petImg" src="https://via.placeholder.com/200?text=Neutral+Pet" alt="Pet">
+<script>
+  let petImg = document.getElementById("petImg");
+  petImg.addEventListener("click", function() {
+    petImg.src = "https://via.placeholder.com/200?text=Excited+Pet";
+  });
+</script>
+Sample 8: Drawing on a Canvas
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
+<script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  canvas.addEventListener("mousemove", function(e) {
+    if (e.buttons !== 1) return;
+    ctx.fillStyle = "red";
+    ctx.fillRect(e.offsetX, e.offsetY, 4, 4);
+  });
+</script>
+Sample 9: Event Delegation Example
+<ul id="itemList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+<script>
+  document.getElementById("itemList").addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+      e.target.style.fontWeight = "bold";
+    }
+  });
+</script>
+Sample 10: Inline Event Handler
+<button onclick="alert('Inline event works!')">Click Me!</button>
