@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Changer</title>
+  <style>
+    body {
+      text-align: center;
+      transition: background-color 0.5s;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #displayImage {
+      width: 300px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Color Changer!</h1>
+  <button id="redBtn">Red</button>
+  <button id="blueBtn">Blue</button>
+  <button id="greenBtn">Green</button>
+  <br>
+  <img id="displayImage" src="https://via.placeholder.com/300?text=Original+Image" alt="Sample Image">
+  <script>
+    // Change background color on button click
+    document.getElementById("redBtn").addEventListener("click", function() {
+      document.body.style.backgroundColor = "salmon";
+      document.getElementById("displayImage").src = "https://via.placeholder.com/300/FF6347/FFFFFF?text=Red+Vibes";
+    });
+    document.getElementById("blueBtn").addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightblue";
+      document.getElementById("displayImage").src = "https://via.placeholder.com/300/1E90FF/FFFFFF?text=Blue+Sky";
+    });
+    document.getElementById("greenBtn").addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightgreen";
+      document.getElementById("displayImage").src = "https://via.placeholder.com/300/32CD32/FFFFFF?text=Green+Garden";
+    });
+  </script>
+</body>
+</html>
