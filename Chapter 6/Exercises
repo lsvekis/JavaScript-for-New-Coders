@@ -1,0 +1,63 @@
+Exercise 1: Create a Greeting Function
+Task: Write a function called sayHello that takes a name as a parameter and prints a personalized greeting.
+Starter Code:
+function sayHello(name) {
+  console.log("Hello, " + name + "! Welcome to JavaScript.");
+}
+sayHello("Alex");
+Exercise 2: Build a Temperature Converter
+Task: Write functions to convert Celsius to Fahrenheit and vice versa.
+Starter Code:
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
+}
+function fahrenheitToCelsius(fahrenheit) {
+  return (fahrenheit - 32) * 5/9;
+}
+console.log("25°C in Fahrenheit is: " + celsiusToFahrenheit(25));
+console.log("77°F in Celsius is: " + fahrenheitToCelsius(77));
+Exercise 3: Factorial Finder
+Task: Write a function that calculates the factorial of a number using a loop.
+Starter Code:
+function factorial(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+console.log("Factorial of 5 is: " + factorial(5));
+Exercise 4: Custom Calculator Menu
+Task: Create a function that takes two numbers and a string representing an operation ("add", "subtract", etc.) and returns the result by calling the appropriate arithmetic function.
+Starter Code:
+function calculate(a, b, operation) {
+  if (operation === "add") {
+    return add(a, b);
+  } else if (operation === "subtract") {
+    return subtract(a, b);
+  } else if (operation === "multiply") {
+    return multiply(a, b);
+  } else if (operation === "divide") {
+    return divide(a, b);
+  } else {
+    return "Unknown operation";
+  }
+}
+console.log("Custom Calculator: " + calculate(8, 2, "multiply"));
+Exercise 5: Rock, Paper, Scissors Rematch
+Task: Modify the Rock, Paper, Scissors game to run multiple rounds in a loop and keep score.
+Starter Code:
+let playerWins = 0;
+let computerWins = 0;
+for (let round = 1; round <= 3; round++) {
+  let playerChoice = "rock"; // Change for testing different outcomes
+  let computerChoice = getComputerChoice();
+  let result = determineWinner(playerChoice, computerChoice);
+  console.log("Round " + round + ": " + result);
+  if (result === "You win!") {
+    playerWins++;
+  } else if (result === "Computer wins!") {
+    computerWins++;
+  }
+}
+console.log("Final Score - Player: " + playerWins + ", Computer: " + computerWins);
