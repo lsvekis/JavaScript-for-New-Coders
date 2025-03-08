@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Pet</title>
+  <style>
+    #pet {
+      width: 200px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    #pet.happy {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Meet Your Digital Pet!</h1>
+  <img id="pet" src="https://via.placeholder.com/200?text=Neutral+Pet" alt="Digital Pet">
+  <script>
+    let pet = document.getElementById("pet");
+    pet.addEventListener("click", function() {
+      pet.src = "https://via.placeholder.com/200?text=Happy+Pet";
+      pet.classList.add("happy");
+    });
+    pet.addEventListener("mouseout", function() {
+      pet.src = "https://via.placeholder.com/200?text=Neutral+Pet";
+      pet.classList.remove("happy");
+    });
+  </script>
+</body>
+</html>
