@@ -1,0 +1,47 @@
+Sample 1: Basic Variable Declaration
+let petName = "Buddy";
+console.log(petName);
+Sample 2: Storing a Number
+let favoriteNumber = 7;
+console.log("My favorite number is " + favoriteNumber);
+Sample 3: String Concatenation
+let firstName = "Emily";
+let lastName = "Rose";
+let fullName = firstName + " " + lastName;
+console.log("Full Name: " + fullName);
+Sample 4: Arithmetic Operations
+let a = 10;
+let b = 5;
+let sum = a + b;
+let product = a * b;
+console.log("Sum: " + sum + ", Product: " + product);
+Sample 5: Multiple Variable Declarations
+let city = "Paris", country = "France", population = 2148000;
+console.log("City: " + city + ", Country: " + country + ", Population: " + population);
+Sample 6: Using Variables in a Function
+function greet(name) {
+  let greeting = "Hello, " + name + "!";
+  return greeting;
+}
+console.log(greet("Jordan"));
+Sample 7: Collecting User Input (Simulated)
+// Simulate collecting user input
+let userName = "Sam"; // Imagine this comes from a prompt
+console.log("Welcome, " + userName + "!");
+Sample 8: Changing Variable Values
+let score = 50;
+console.log("Initial score: " + score);
+score = score + 25;
+console.log("Updated score: " + score);
+Sample 9: Combining Different Data Types
+let item = "book";
+let quantity = 3;
+console.log("You have " + quantity + " " + item + (quantity > 1 ? "s" : "") + ".");
+Sample 10: Complete Mad Libs Game
+// Mad Libs Game: Create your own story!
+let adjective = "mysterious";
+let noun = "pirate";
+let verb = "sails";
+let place = "ocean";
+let madLibsStory = "In a " + adjective + " world, a " + noun + " " + verb + " across the " + place + ", seeking treasure and adventure.";
+console.log(madLibsStory);
